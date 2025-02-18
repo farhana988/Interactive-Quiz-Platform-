@@ -1,2 +1,15 @@
 
 @import "tailwindcss";
+
+@layer base {
+  body {
+    background:  linear-gradient(to right, #c6c3f7c9,#f3f4f6 , #e4eefa);
+    color: #111827;
+    font-family: "Chakra Petch";
+  }
+
+  .dark body {
+    background: #212121;
+    color: #f3f4f6;
+  }
+}
