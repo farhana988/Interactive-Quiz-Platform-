@@ -3,7 +3,7 @@
 
 A simple and interactive quiz application built with React and Tailwind CSS. This app allows users to take quizzes on various topics, track their scores, and improve their knowledge in a fun way.
 
-<img src="https://i.ibb.co/ZzrmjmZJ/quiz.jpg" alt="Pawlogue Screenshot" style="width: 100%; max-width: 800px;"/>
+<img src="https://i.ibb.co/ZzrmjmZJ/quiz.jpg" alt="quiz Screenshot" style="width: 100%; max-width: 800px;"/>
 
 
 - **Live URL:**  https://interactive-quiz-platform.netlify.app/
