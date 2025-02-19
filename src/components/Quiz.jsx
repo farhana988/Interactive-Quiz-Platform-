@@ -53,31 +53,31 @@ const Quiz = () => {
       id: 6,
       type: "integer",
       text: "What is the value of 12 + 28?",
-      answer: 40,
+      answer: "40",
     },
     {
       id: 7,
       type: "integer",
       text: "How many states are there in the United States?",
-      answer: 50,
+      answer: "50",
     },
     {
       id: 8,
       type: "integer",
       text: "In which year was the Declaration of Independence signed?",
-      answer: 1776,
+      answer: "1776",
     },
     {
       id: 9,
       type: "integer",
       text: "What is the value of pi rounded to the nearest integer?",
-      answer: 3,
+      answer: "3",
     },
     {
       id: 10,
       type: "integer",
       text: "If a car travels at 60 mph for 2 hours, how many miles does it travel?",
-      answer: 120,
+      answer: "120",
     },
   ];
 
@@ -155,7 +155,7 @@ const Quiz = () => {
 
             {/* Text on top of the image */}
             <h1 className="absolute flex items-center justify-center text-5xl font-bold
-            top-36 left-36 md:top-52 md:left-52">
+            top-40 left-36 md:top-52 md:left-52">
               Quiz
             </h1>
           </div>
@@ -164,14 +164,14 @@ const Quiz = () => {
             onSubmit={handleAnswerSubmit}
           />
           {questions[currentQuestion].type !== "mcq" && showFeedback && (
-            <span className="absolute top-[410px] md:top-[480px] lg:top-[650px] 2xl:top-[550px]
+            <span className="absolute top-[450px]  md:top-[510px] lg:top-[790px] 2xl:top-[550px]
             right-12 md:right-52 lg:right-[500px] 2xl:right-[750px]">
               <Feedback isCorrect={isCorrect} />
             </span>
           )}
           {questions[currentQuestion].type === "mcq" ? (
             <div
-              className="absolute top-[360px] md:top-[440px] lg:top-[580px] 2xl:top-[480px]
+              className="absolute top-[390px] md:top-[470px] lg:top-[620px] 2xl:top-[480px]
             right-44 md:right-[340px] lg:right-[670px] 2xl:right-[900px]"
             >
               <Timer
@@ -182,7 +182,7 @@ const Quiz = () => {
             </div>
           ) : (
             <div
-              className="absolute top-[420px] md:top-[490px] lg:top-[650px] 2xl:top-[550px]
+              className="absolute top-[470px] md:top-[550px] lg:top-[700px] 2xl:top-[550px]
             right-44 md:right-[340px] lg:right-[670px] 2xl:right-[900px] "
             >
               <Timer
