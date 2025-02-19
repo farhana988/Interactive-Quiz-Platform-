@@ -39,14 +39,14 @@ const Question = ({ question, onSubmit }) => {
                 className={`mb-2 p-2 rounded-bl-3xl rounded-tr-3xl 
                   rounded-lg ${optionStyle}`}
               >
-                <label className="flex items-center">
+                <label className="flex items-center pl-7">
                   <input
                     type="radio"
                     name="answer"
                     value={option}
                     checked={isSelected}
                     onChange={(e) => setSelectedAnswer(e.target.value)}
-                    className="mr-2"
+                    className="mr-2 "
                     disabled={showFeedback}
                     required
                   />
@@ -57,10 +57,11 @@ const Question = ({ question, onSubmit }) => {
           })}
           <button
             type="submit"
-            className={`mt-4 px-4 py-2 rounded text-white transition duration-300 ${
+            className={`mt-4 px-8 py-2  rounded-bl-3xl rounded-tr-3xl  text-white 
+              transition duration-300 ${
               !selectedAnswer || showFeedback
-                ? "bg-gray-400 cursor-not-allowed opacity-50"
-                : "bg-blue-500 hover:bg-blue-600"
+                  ? "bg-gray-400 cursor-not-allowed opacity-50"
+                : "bg-[#2c0866d3] hover:bg-[#2c0866af]"
             }`}
             disabled={!selectedAnswer || showFeedback}
           >
@@ -73,16 +74,18 @@ const Question = ({ question, onSubmit }) => {
             type="number"
             value={selectedAnswer}
             onChange={(e) => setSelectedAnswer(e.target.value)}
-            className="bg-white p-4 rounded"
+            className="bg-white  flex mb-2 p-2 rounded-bl-3xl rounded-tr-3xl 
+                  rounded-lg w-full pl-7"
             disabled={showFeedback}
             required
           />
           <button
             type="submit"
-            className={`mt-4 px-4 py-2 rounded text-white transition duration-300 ${
+            className={`mt-4 px-8 py-2  rounded-bl-3xl rounded-tr-3xl  text-white 
+              transition duration-300 ${
               !selectedAnswer || showFeedback
                 ? "bg-gray-400 cursor-not-allowed opacity-50"
-                : "bg-blue-500 hover:bg-blue-600"
+                : "bg-[#2c0866d3] hover:bg-[#2c0866af]"
             }`}
             disabled={!selectedAnswer || showFeedback}
           >

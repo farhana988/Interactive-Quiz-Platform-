@@ -136,7 +136,7 @@ const Quiz = () => {
   };
 
   return (
-    <div className="min-h-screen p-8 flex flex-col items-center justify-center text-center">
+    <div className="min-h-screen p-8 flex flex-col items-center justify-center text-center relative">
       {quizCompleted ? (
         <Scoreboard
           score={score}
@@ -164,14 +164,15 @@ const Quiz = () => {
             onSubmit={handleAnswerSubmit}
           />
           {questions[currentQuestion].type !== "mcq" && showFeedback && (
-            <span className="absolute top-[510px] lg:top-[650px]">
+            <span className="absolute top-[410px] md:top-[480px] lg:top-[650px] 2xl:top-[550px]
+            right-12 md:right-52 lg:right-[500px] 2xl:right-[750px]">
               <Feedback isCorrect={isCorrect} />
             </span>
           )}
           {questions[currentQuestion].type === "mcq" ? (
             <div
-              className="absolute top-[350px] md:top-[440px] lg:top-[580px] 
-            right-44 md:right-[340px] lg:right-[670px] "
+              className="absolute top-[360px] md:top-[440px] lg:top-[580px] 2xl:top-[480px]
+            right-44 md:right-[340px] lg:right-[670px] 2xl:right-[900px]"
             >
               <Timer
                 key={currentQuestion}
@@ -181,8 +182,8 @@ const Quiz = () => {
             </div>
           ) : (
             <div
-              className="absolute top-[450px] md:top-[500px] lg:top-[680px] 
-            right-44 md:right-[340px] lg:right-[670px]  "
+              className="absolute top-[420px] md:top-[490px] lg:top-[650px] 2xl:top-[550px]
+            right-44 md:right-[340px] lg:right-[670px] 2xl:right-[900px] "
             >
               <Timer
                 key="integer-timer"
